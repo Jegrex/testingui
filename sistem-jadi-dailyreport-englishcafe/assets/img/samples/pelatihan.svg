@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#FDF8F5" rx="16"/>
+  <rect x="30" y="28" width="580" height="344" fill="#FFFFFF" stroke="#EADCD6" stroke-width="2" rx="14"/>
+  <rect x="54" y="52" width="532" height="72" fill="#512D23" rx="10"/>
+  <text x="80" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" fill="#F39C12">Pelatihan &amp; Kelas Industri Berdampak 2026</text>
+  <text x="80" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#FDF8F5">Dokumentasi Panitia, Peserta &amp; Pembekalan Materi</text>
+  <rect x="54" y="144" width="166" height="196" fill="#FCECE8" rx="10"/>
+  <text x="72" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#512D23">Sesi Pembekalan</text>
+  <text x="72" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8D5B4C">1. Registrasi Peserta</text>
+  <text x="72" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8D5B4C">2. Pemaparan Materi</text>
+  <text x="72" y="248" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8D5B4C">3. Praktik &amp; Evaluasi</text>
+  <text x="72" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8D5B4C">4. Foto Bersama</text>
+  <rect x="236" y="144" width="350" height="196" fill="#FFF8F5" stroke="#EADCD6" rx="10"/>
+  <rect x="260" y="170" width="302" height="90" fill="#E84C22" rx="8"/>
+  <text x="292" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">SERTIFIKAT &amp; DOKUMENTASI</text>
+  <text x="330" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#FCECE8">English Cafe Indonesia 2026</text>
+  <rect x="260" y="278" width="180" height="14" fill="#EADCD6" rx="7"/>
+  <rect x="260" y="302" width="120" height="12" fill="#F4C6B8" rx="6"/>
+</svg>

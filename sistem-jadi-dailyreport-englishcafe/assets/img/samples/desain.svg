@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#FDF8F5" rx="16"/>
+  <rect x="32" y="28" width="576" height="344" fill="#FFFFFF" stroke="#EADCD6" stroke-width="2" rx="14"/>
+  <rect x="56" y="54" width="360" height="292" fill="#FFF8F5" stroke="#F4C6B8" rx="12"/>
+  <circle cx="236" cy="184" r="78" fill="#FCECE8"/>
+  <circle cx="236" cy="184" r="52" fill="#E84C22"/>
+  <path d="M214 176h34a14 14 0 0 1 0 28h-34v-28z" fill="#FFFFFF"/>
+  <path d="M248 182h10a8 8 0 1 1 0 16h-10" stroke="#F39C12" stroke-width="5" fill="none"/>
+  <text x="128" y="294" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#512D23">Aset Desain English Cafe</text>
+  <text x="150" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8D5B4C">Background &amp; Visual Branding</text>
+  <rect x="434" y="54" width="150" height="136" fill="#512D23" rx="10"/>
+  <text x="452" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#F39C12">Color Palette</text>
+  <rect x="452" y="98" width="32" height="32" fill="#E84C22" rx="6"/>
+  <rect x="492" y="98" width="32" height="32" fill="#F39C12" rx="6"/>
+  <rect x="532" y="98" width="32" height="32" fill="#FDF8F5" rx="6"/>
+  <text x="452" y="158" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#FDF8F5">#E84C22 / #512D23</text>
+  <rect x="434" y="210" width="150" height="136" fill="#FCECE8" rx="10"/>
+  <text x="452" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#512D23">Format Ekspor</text>
+  <text x="452" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8D5B4C">PNG HD 1920x1080</text>
+  <text x="452" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#8D5B4C">Siap Pasang Web</text>
+</svg>

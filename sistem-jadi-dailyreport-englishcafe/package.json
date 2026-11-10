@@ -1,0 +1,15 @@
+{
+  "name": "english-cafe-dailyreport-system",
+  "version": "1.0.0",
+  "description": "Sistem Full-Stack Pelaporan Aktivitas Harian Peserta Magang English Cafe (Zero-Dependency Node.js + Vercel Ready)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check backend/store.js && node --check backend/handler.js && node --check api/index.js && node --check assets/js/app.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

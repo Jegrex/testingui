@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Daily Report — English Cafe DailyReport</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css?v=10" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-header">
+        <a href="04-laporan-peserta.html" class="ec-brand">
+          <span class="ec-brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M17 8h1a4 4 0 1 1 0 8h-1" stroke="#F39C12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 2v3M10 2v3M14 2v3" stroke="#F39C12" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="ec-brand-text">
+            <span class="ec-brand-top">ENGLISH CAFE</span>
+            <span class="ec-brand-bottom">DAILYREPORT</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Menu Peserta Magang">
+        <div class="sidebar-section-caption">Menu Peserta Magang</div>
+        <a href="03-profil-peserta.html" class="sidebar-link">
+          <i class="bi bi-person-fill-gear" aria-hidden="true"></i>
+          <span>Profil Saya</span>
+        </a>
+        <a href="04-laporan-peserta.html" class="sidebar-link">
+          <i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i>
+          <span>Logbook Laporan</span>
+          <span class="sidebar-badge d-none" id="sidebarRevisiBadge" title="Laporan perlu perbaikan">0</span>
+        </a>
+        <a href="05-upload-laporan.html" class="sidebar-link active">
+          <i class="bi bi-cloud-arrow-up-fill" aria-hidden="true"></i>
+          <span>Upload Laporan</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="sidebar-user-avatar" id="sidebarUserAvatar">
+            <svg width="34" height="34" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="17" r="9" fill="#8D5B4C"/>
+              <path d="M8 44C8 35.1634 15.1634 28 24 28C32.8366 28 40 35.1634 40 44" fill="#8D5B4C"/>
+            </svg>
+          </div>
+          <div>
+            <p class="sidebar-user-name" id="sidebarUserName">Memuat...</p>
+            <p class="sidebar-user-email" id="sidebarUserEmail">-</p>
+          </div>
+        </div>
+        <button type="button" class="sidebar-logout" data-logout-btn>
+          <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+          <span>Keluar</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Area -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka Menu Navigasi">
+            <i class="bi bi-list fs-5" aria-hidden="true"></i>
+          </button>
+          <a href="04-laporan-peserta.html" class="btn-ec-back" title="Kembali ke Daftar Laporan">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i>
+            <span>Kembali</span>
+          </a>
+        </div>
+        <h1 class="topbar-title">Upload Daily Report</h1>
+      </header>
+
+      <main class="app-content d-flex align-items-center justify-content-center">
+        <div class="report-form-card w-100">
+          <form id="formUploadLaporan" action="/api/reports" method="post" novalidate>
+            <div id="uploadAlertBox" aria-live="polite"></div>
+
+            <div class="mb-3">
+              <label for="tglLaporan" class="ec-form-label">Tanggal Laporan <span class="ec-req-mark" aria-hidden="true">*</span></label>
+              <span id="tglHint" class="ec-field-hint">Pilih tanggal aktivitas kerja yang dilaporkan</span>
+              <input type="date" id="tglLaporan" name="tgl_laporan" class="ec-form-control" aria-describedby="tglHint" data-error="errUploadTgl" required />
+              <div id="errUploadTgl" class="ec-field-error"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="hasilKerja" class="ec-form-label">Hasil Kerja Harian <span class="ec-req-mark" aria-hidden="true">*</span></label>
+              <span id="hasilHint" class="ec-field-hint">Tuliskan progres atau output tugas harian Anda (min. 10 karakter)</span>
+              <textarea id="hasilKerja" name="hasil_kerja" rows="4" minlength="10" class="ec-form-control" placeholder="Contoh: Menyelesaikan implementasi fitur filter laporan dan uji coba responsivitas tabel..." aria-describedby="hasilHint" data-error="errUploadHasil" required></textarea>
+              <div id="errUploadHasil" class="ec-field-error"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="kendalaKerja" class="ec-form-label">Kendala yang Dihadapi <span class="ec-req-mark" aria-hidden="true">*</span></label>
+              <textarea id="kendalaKerja" name="kendala_kerja" rows="3" class="ec-form-control" placeholder="Tuliskan kendala pekerjaan (isi 'Tidak ada' jika pekerjaan berjalan lancar)" data-error="errUploadKendala" required></textarea>
+              <div id="errUploadKendala" class="ec-field-error"></div>
+            </div>
+
+            <div class="mb-4" id="buktiUploadFieldGroup">
+              <label for="buktiFileInput" class="ec-form-label">Bukti Pekerjaan (Foto Dokumentasi) <span class="ec-req-mark" aria-hidden="true">*</span></label>
+              <span class="ec-field-hint">Format didukung: JPG, PNG, WEBP, atau SVG</span>
+              <div class="d-flex align-items-center gap-2 flex-wrap" id="uploadFilePreviewWrap">
+                <label class="btn-upload-outline" id="uploadBoxZone" for="buktiFileInput">
+                  <i class="bi bi-cloud-arrow-up-fill" aria-hidden="true"></i>
+                  <span id="uploadBtnLabelText">Pilih Gambar Bukti</span>
+                  <input type="file" id="buktiFileInput" name="bukti_pekerjaan" accept="image/*" class="d-none" />
+                </label>
+              </div>
+              <div class="upload-preview-box d-none" id="uploadThumbPreviewBox">
+                <img src="" alt="Preview bukti pekerjaan" class="upload-preview-thumb" id="uploadThumbImg" />
+                <div class="flex-grow-1 min-w-0">
+                  <div class="fw-bold small text-truncate" id="uploadThumbName">-</div>
+                  <div class="text-muted" style="font-size: 0.72rem;" id="uploadThumbMeta">Siap dikirim ke server</div>
+                </div>
+                <button type="button" class="file-chip-remove" id="btnClearUploadPreview" aria-label="Hapus gambar terpilih" title="Hapus gambar">
+                  <i class="bi bi-x-circle-fill fs-5" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div id="errUploadBukti" class="ec-field-error"></div>
+            </div>
+
+            <button type="submit" class="btn-ec-primary btn-primary w-100" id="btnSubmitUpload">
+              <i class="bi bi-send-fill" aria-hidden="true"></i>
+              <span>Kirim Laporan Harian</span>
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js?v=11"></script>
+</body>
+</html>
